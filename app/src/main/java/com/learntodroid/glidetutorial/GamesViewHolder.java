@@ -29,6 +29,8 @@ public class GamesViewHolder extends RecyclerView.ViewHolder {
         releaseDate.setText(game.getReleaseDate());
         platform.setText(game.getPlatform());
 
-        Glide.with(itemView).load(game.getBoxArtImageUrl()).into(boxArt);
+        Glide.with(itemView)
+                .load(game.getBoxArtImageUri())
+                .into(boxArt);
     }
 }
