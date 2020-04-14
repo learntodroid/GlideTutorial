@@ -5,14 +5,15 @@ public class Game {
     private String genre;
     private String releaseDate;
     private String platform;
-    private String boxArtImageUrl;
+    private String boxArtImageUri;
+    private String description;
 
-    public Game(String title, String genre, String releaseDate, String platform, String boxArtImageUrl) {
+    public Game(String title, String genre, String releaseDate, String platform, String boxArtImageUri) {
         this.title = title;
         this.genre = genre;
         this.releaseDate = releaseDate;
         this.platform = platform;
-        this.boxArtImageUrl = boxArtImageUrl;
+        this.boxArtImageUri = boxArtImageUri;
     }
 
     public String getTitle() {
@@ -27,11 +28,19 @@ public class Game {
         return releaseDate;
     }
 
-    public String getBoxArtImageUrl() {
-        return boxArtImageUrl;
+    public String getBoxArtImageUri() {
+        return boxArtImageUri;
     }
 
     public String getPlatform() {
         return platform;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }
